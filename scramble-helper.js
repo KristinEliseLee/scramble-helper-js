@@ -48,6 +48,7 @@ const wordsArray = ['potato', 'tomato', 'cat', 'potahto', 'tomahto', 'dog']
 
 
 
+
 // Create a function that reverses a word
 function reverseWord(word){
 	const reversedWord = [];
@@ -56,7 +57,7 @@ function reverseWord(word){
 		reversedWord.push(word.charAt(i));
 		i -= 1 ;
 		}
-	return reversedWord.join("");
+	return reversedWord.join('');
 }
 
 // Create a function that takes an array of words and returns a new array of the
@@ -64,10 +65,15 @@ function reverseWord(word){
 
  function reverseWordsInSentence(sentence) {
 
- 	const sentenceArray = sentence.split(" ");
+ 	const sentenceArray = sentence.split(' ');
  	const reversedWordArray = sentenceArray.map(word => reverseWord(word));
- 	return reversedWordArray.join(" ");
+ 	return reversedWordArray.join(' ');
  }
+
+const toReverse = wordsArray.join(' ');
+
+const reversedWordsArray = reverseWordsInSentence(toReverse).split(' ');
+
 
 // Create a function that returns a random word from an array
 function randWord(wordArray) {
